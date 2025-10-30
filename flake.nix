@@ -18,6 +18,7 @@
 
   outputs = { 
     self, 
+    hydra,
     nixpkgs, 
     nixos-hardware
   }: 
