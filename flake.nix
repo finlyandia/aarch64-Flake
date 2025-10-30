@@ -9,26 +9,18 @@
       url = "github:nixos/nixos-hardware";
     };
 
-    hydra = {
-      url = "github:NixOS/hydra";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = { 
     self, 
-    hydra,
     nixpkgs, 
     nixos-hardware
-  }@inputs: 
+  }:
 
   {
     nixosConfigurations = {
       rpi4 = nixpkgs.lib.nixosSystem {
         system = "aarch64-linux";
-        specialArgs = {
-          inherit inputs;
-        };
         modules = [
           ./profiles/default.nix
           nixos-hardware.nixosModules.raspberry-pi-4
