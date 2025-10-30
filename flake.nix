@@ -21,14 +21,14 @@
     hydra,
     nixpkgs, 
     nixos-hardware
-  }: 
+  }@inputs: 
 
   {
     nixosConfigurations = {
       rpi4 = nixpkgs.lib.nixosSystem {
         system = "aarch64-linux";
         specialArgs = {
-          inherit inputs; # Hydra
+          inherit inputs;
         };
         modules = [
           ./profiles/default.nix
