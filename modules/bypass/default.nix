@@ -22,7 +22,7 @@ in {
       udpSupport = true;
       udpPorts = [ "443" ];
       httpSupport = false;
-      configureFirewall = false;
+      configureFirewall = true;
     };
   };
 }
