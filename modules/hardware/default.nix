@@ -40,10 +40,13 @@ in {
         ];
       };
     };
+    nixpkgs.config.permittedInsecurePackages = [
+      "mbedtls-2.28.10"
+    ]; # For shadowsocks
     networking = {
       hostName = "rpi4";
       enableIPv6 = false;
-      firewall.enable = false;
+      firewall.enable = true;
     };
     hardware.enableRedistributableFirmware = true;
   };
