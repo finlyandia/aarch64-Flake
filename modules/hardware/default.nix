@@ -42,7 +42,8 @@ in {
     };
     networking = {
       hostName = "rpi4";
-      enableIPv6 = false; 
+      enableIPv6 = false;
+      firewall.enable = false;
     };
     hardware.enableRedistributableFirmware = true;
   };
