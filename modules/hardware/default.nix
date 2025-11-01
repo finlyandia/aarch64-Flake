@@ -40,6 +40,10 @@ in {
         ];
       };
     };
+    networking = {
+      hostName = "rpi4";
+      enableIPv6 = false; 
+    };
     hardware.enableRedistributableFirmware = true;
   };
 }
