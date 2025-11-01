@@ -12,9 +12,9 @@
     hardware.enable = true;
     user.enable = true;
     ssh.enable = true;
-    postgresql.enable = true;
+    postgresql.enable = false;
     bypass.enable = true;
-    gitea.enable = true;
+    gitea.enable = false;
     shadowsocks.enable = true;
   };
 }
