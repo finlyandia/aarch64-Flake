@@ -14,6 +14,7 @@ in {
     services = {
       postgresql = {
         enable = true;
+        ensureDatabases = [ "gitea" ];
       };
     };
   };
