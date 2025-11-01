@@ -6,13 +6,15 @@
     ../modules/postgresql/default.nix
     ../modules/bypass/default.nix
     ../modules/gitea/default.nix
+    ../modules/shadowsocks/default.nix
   ];
   module = {
     hardware.enable = true;
     user.enable = true;
     ssh.enable = true;
     postgresql.enable = true;
-    bypass.enable = false;
+    bypass.enable = true;
     gitea.enable = true;
+    shadowsocks.enable = true;
   };
 }
