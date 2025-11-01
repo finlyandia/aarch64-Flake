@@ -12,7 +12,7 @@
     user.enable = true;
     ssh.enable = true;
     postgresql.enable = true;
-    bypass.enable = true;
+    bypass.enable = false;
     gitea.enable = true;
   };
 }
